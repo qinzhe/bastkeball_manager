@@ -1,0 +1,35 @@
+
+.img-responsive
+{
+  width: 350px;
+  height: 200px;
+}
+.row{
+  margin: auto;
+  margin-left: 20px;
+  width: 1375px;
+  display: inline;
+}
+.col-md-4
+{
+    width: 22.33333333%;
+}
+.portfolio-item{
+  background-color:#FFF;
+  margin-left: 20px;
+  padding-top: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+#portfolio{
+  margin-left: 3px;
+}
+body{
+  background-color:rgb(231, 231, 231);
+}
+.delete{
+  width: 200px;
+  height: 200px;
+  border:1px solid red;
+  margin-left: 120px;
+}
