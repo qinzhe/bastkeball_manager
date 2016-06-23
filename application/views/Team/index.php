@@ -25,7 +25,7 @@
           echo"<div class='row'>";
           foreach ($teams as $team) {
             $select=base_url("Player/?t={$team->cname}");
-            $edit=base_url("Team/?id={$team->id}");
+            $edit=base_url("Team/edit/?id={$team->id}");
             $del=base_url("Team/delete/?id={$team->id}");
                 echo<<<HTML
                     <div class='col-md-4 col-sm-6 portfolio-item'>
@@ -40,10 +40,9 @@
                               <img src="http://localhost:8080/tarea5/assets/img/icons/cancel-circle.png" />
                             </a>
 
-                            <a class="close" data-toggle="modal" data-target=".bs-example-modal-lg" href="$edit" >
+                            <a class="close"href="{$edit}" >
                               <img src="http://localhost:8080/tarea5/assets/img/icons/pencil.png" />
                             </a>
-
                             <br>
                             <br>
                         </div>
@@ -51,9 +50,11 @@
 HTML;
 
           }
+
           echo "</div>";
           echo "</section>";
           ?>
+
       </div>
     </div>
     </section>
@@ -74,20 +75,20 @@ HTML;
                       <input type="file" name="image" placeholder="image" class="form-control">
 
                       <button type="submit" class="btn btn-blue">Save</button>
+
                 </div>
               </form>
             </div>
           </div>
-
         </div>
     </div>
     <!-- Scripts -->
-    <script src="assets/js/jquery-1.11.1.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/typewriter.js"></script>
-    <script src="assets/js/jquery.onepagenav.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="<?php echo base_url('assets/js/jquery-1.11.1.min.js')?>"></script>
+    <script src="<?php  echo base_url('assets/js/owl.carousel.min.js')?>"></script>
+    <script src="<?php  echo base_url('assets/js/bootstrap.min.js')?>"></script>
+    <script src="<?php  echo base_url('assets/js/wow.min.js')?>"></script>
+    <script src="<?php  echo base_url('assets/js/typewriter.js')?>"></script>
+    <script src="<?php  echo base_url('assets/js/jquery.onepagenav.js')?>"></script>
+    <script src="<?php  echo base_url('assets/js/main.js')?>"></script>
   </body>
 </html>

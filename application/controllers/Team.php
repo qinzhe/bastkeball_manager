@@ -14,6 +14,7 @@ class Team extends CI_Controller{
   function index()
   {
     $data=array();
+
     $data['teams']=$this->team_model->select();
 
     $this->load->view('Team/index',$data);
@@ -40,6 +41,14 @@ class Team extends CI_Controller{
     $this->team_model->deleteTeam($id);
 
     redirect('Team');
+  }
+
+  function edit()
+  {
+    $id=(isset($_GET['id']))?$_GET['id']+0:0;
+    $data['team']=$this->team_model->selectTeamUpdate($id);
+    $this->load->view('Team/edit',$data);
+
   }
 
 

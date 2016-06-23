@@ -34,8 +34,8 @@
           foreach ($teamsplayer as $teamp) {
             $edit=base_url("Player/?id={$teamp->player_id}");
             $del=base_url("Player/delete/?id={$teamp->player_id}");
-                echo<<<HTML
 
+                echo<<<HTML
                     <div class='col-md-4 col-sm-6 portfolio-item'>
 
                         <a href="" class='portfolio-link'>
@@ -44,7 +44,6 @@
                         <div class='portfolio-caption'>
                             <h4>{$teamp->name}</h4><p class='text-muted'><strong>Number</strong>: {$teamp->number}</p>
                             <p class='text-muted'><strong>Position</strong>: {$teamp->position}</p>
-
                             <a href="{$del}"return onclick="borrar();" class="close">
                               <img src="http://localhost:8080/tarea5/assets/img/icons/cancel-circle.png" />
                             </a>
