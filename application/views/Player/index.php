@@ -22,7 +22,7 @@
       <div class="container">
 
         <div class="row title text-center">
-          <h2 class="margin-top"> <?php echo "{$_GET['t']}"; ?> Roster</h2>
+          <h2 class="margin-top">Roster</h2>
           <h4 class="light muted">Choose your favorite player!</h4>
         </div>
         <button type="button" class="btn btn-blue" data-toggle="modal" data-target=".example-modal">Add new player!</button>
@@ -87,7 +87,7 @@ HTML;
                             </select>
                             <input type="text" name="alias" placeholder="Alias" class="form-control">
                             <input type="number" name="number" placeholder="Number" class="form-control">
-                            <input type="hidden" name="team_id" placeholder="Team" class="form-control" value="<?php echo $teamp->id?>">
+                            <input type="hidden" name="team_id" placeholder="Team" class="form-control" value="<?php echo $_GET['id'] ?>">
                             <input type="file" name="img" placeholder="Imagen" class="form-control">
 
                             <button type="submit" class="btn btn-blue">Save</button>

@@ -28,8 +28,9 @@ class player_model extends CI_Model{
     $this->db->select("players.alias, players.id as player_id,players.number,players.position,players.img, team.cname,team.city,players.name,team.id");
     $this->db->from("players");
     $this->db->join("team", "players.team_id= team.id");
-    $this->db->where('team.cname=',$team_name);
+    $this->db->where('team.id=',$team_name);
     $query = $this->db->get();
+
     return $query->result();
   }
 

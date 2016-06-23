@@ -15,7 +15,11 @@
 
         <div class="row title text-center">
           <h2 class="margin-top">Teams</h2>
-          <h4 class="light muted">Choose your dream team!</h4>
+          <h4 class="light muted">Search your dream team!</h4>
+          <form method="get" action="<?php echo base_url('Team/search')?>">
+            <button class="btn btn-red">Search</button>
+            <input type="search" name="t" placeholder="Search" class="form-control"/>
+          </form>
         </div>
         <button type="button" class="btn btn-blue" data-toggle="modal" data-target=".bs-example-modal-lg">Add new team!</button>
 
@@ -24,7 +28,7 @@
           echo "<section id='portfolio' class='bg-light-gray'>";
           echo"<div class='row'>";
           foreach ($teams as $team) {
-            $select=base_url("Player/?t={$team->cname}");
+            $select=base_url("Player/?id={$team->id}");
             $edit=base_url("Team/edit/?id={$team->id}");
             $del=base_url("Team/delete/?id={$team->id}");
                 echo<<<HTML

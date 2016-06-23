@@ -9,13 +9,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img src="<?php echo  base_url('img/logo.png'); ?>" data-active-url="<?php echo  base_url('assets/img/logo-active.png'); ?>" alt=""></a>
+      <a class="navbar-brand" href="<?php echo base_url('Home')?>"><img src="<?php echo  base_url('img/logo.png'); ?>" data-active-url="<?php echo  base_url('assets/img/logo-active.png'); ?>" alt=""></a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right main-nav">
-        <li><a href="Home">Home</a></li>
-        <li><a href="Team">Teams</a></li>
+        <li><a href="<?php echo base_url('Home')?>">Home</a></li>
+        <li><a href="<?php echo base_url('Team')?>">Teams</a></li>
         <li><a href="#"class="btn btn-blue">Sign Up</a></li>
       </ul>
     </div>

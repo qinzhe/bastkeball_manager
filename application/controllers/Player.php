@@ -13,9 +13,9 @@ class Player extends CI_Controller{
 
   function index()
   {
-    if (isset($_GET['t']))
+    if (isset($_GET['id']))
     {
-      $team=$_GET['t'];
+      $team=$_GET['id'];
       $data=array();
       $id=(isset($_GET['id']))?$_GET['id']+0:0;
 

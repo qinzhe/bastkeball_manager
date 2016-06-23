@@ -51,5 +51,10 @@ class Team extends CI_Controller{
 
   }
 
+  function search()
+  {
+    
+  }
+
 
 }
