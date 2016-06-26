@@ -8,6 +8,10 @@ class Team extends CI_Controller{
     parent::__construct();
     $this->load->helper('url');
     $this->load->model('team_model');
+
+    if(!$this->session->userdata('login')){
+      redirect('Login');
+    }
   }
 
 
@@ -53,7 +57,12 @@ class Team extends CI_Controller{
 
   function search()
   {
-    
+    if(isset($_GET['t']))
+    {
+      $search=$this->input->get('t');
+      $data['teams']=$this->team_model->searchTeam($search);
+      $this->load->view('Team/index',$data);
+    }
   }
 
 

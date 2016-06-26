@@ -64,4 +64,11 @@ class team_model extends CI_Model{
     $this->db->delete('team');
   }
 
+  function searchTeam($teamName)
+  {
+    $query=$this->db->like('cname',$teamName);
+    $query=$this->db->get('team');
+    return $query->result();
+  }
+
 }

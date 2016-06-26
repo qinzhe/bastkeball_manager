@@ -8,7 +8,7 @@
   </head>
 
   <body>
-      <?php  include 'assets/css/navbar.php'; ?>
+    <?php  include 'assets/css/navbar.php'; ?>
     <section id="team" class="section gray-bg">
 
       <div class="container">
@@ -18,7 +18,7 @@
           <h4 class="light muted">Search your dream team!</h4>
           <form method="get" action="<?php echo base_url('Team/search')?>">
             <button class="btn btn-red">Search</button>
-            <input type="search" name="t" placeholder="Search" class="form-control"/>
+            <input type="search" name="t" placeholder="Search" class="form-control" id="search"/>
           </form>
         </div>
         <button type="button" class="btn btn-blue" data-toggle="modal" data-target=".bs-example-modal-lg">Add new team!</button>
@@ -31,10 +31,11 @@
             $select=base_url("Player/?id={$team->id}");
             $edit=base_url("Team/edit/?id={$team->id}");
             $del=base_url("Team/delete/?id={$team->id}");
+            $imgUrl=base_url($team->image);
                 echo<<<HTML
                     <div class='col-md-4 col-sm-6 portfolio-item'>
                         <a href="{$select}" class='portfolio-link'>
-                            <img src="{$team->image}" class='img-responsive' id="{$team->image}">
+                            <img src="{$imgUrl}" class='img-responsive' id="{$team->id}">
                         </a>
                         <div class='portfolio-caption'>
                             <h4>{$team->city}</h4>
@@ -44,7 +45,7 @@
                               <img src="http://localhost:8080/tarea5/assets/img/icons/cancel-circle.png" />
                             </a>
 
-                            <a class="close"href="{$edit}" >
+                            <a href="{$edit}" class="close">
                               <img src="http://localhost:8080/tarea5/assets/img/icons/pencil.png" />
                             </a>
                             <br>
@@ -94,5 +95,6 @@ HTML;
     <script src="<?php  echo base_url('assets/js/typewriter.js')?>"></script>
     <script src="<?php  echo base_url('assets/js/jquery.onepagenav.js')?>"></script>
     <script src="<?php  echo base_url('assets/js/main.js')?>"></script>
+    <script src="<?php  echo base_url('assets/js/team.js')?>"></script>
   </body>
 </html>
