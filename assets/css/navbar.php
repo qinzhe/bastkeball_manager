@@ -16,6 +16,7 @@
       <ul class="nav navbar-nav navbar-right main-nav">
         <li><a href="<?php echo base_url('Home')?>">Home</a></li>
         <li><a href="<?php echo base_url('Team')?>">Teams</a></li>
+        <li><a href="<?php echo base_url('User')?>">User</a></li>
         <?php
         if($this->session->userdata('login')){
           echo "<li><a>".'Hello! '.$this->session->userdata('name')."</a></li>";

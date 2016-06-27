@@ -7,15 +7,18 @@ class Login extends CI_Controller{
   {
     parent::__construct();
     $this->load->model('login_model');
+
   }
 
   function index()
   {
+
     if($this->session->userdata('login')){
       redirect(site_url('Home'));
     }else{
       $this->load->view('Login/index');
     }
+
 
   }
   function login()
@@ -57,6 +60,10 @@ class Login extends CI_Controller{
   {
     $this->session->sess_destroy();
     redirect('Login');
+  }
+  function hello()
+  {
+    echo "hello";
   }
 
 }

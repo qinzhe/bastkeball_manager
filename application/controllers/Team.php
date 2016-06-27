@@ -27,6 +27,7 @@ class Team extends CI_Controller{
       $this->load->view('Team/AddTeam');
   }
 
+
   function saveTeam()
   {
     if ($_POST)
